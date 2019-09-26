@@ -20,7 +20,7 @@ public class ServiceController {
 		Enumeration<String> headers = request.getHeaderNames();
 		while (headers.hasMoreElements()) {
 			String header = headers.nextElement();
-			sb.append(header).append(": ").append(header);
+			sb.append(header).append(": ").append(request.getHeader(header));
 			if (headers.hasMoreElements()) {
 				sb.append(", ");
 			}
